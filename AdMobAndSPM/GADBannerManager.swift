@@ -22,7 +22,9 @@ struct GADBannerManager: UIViewControllerRepresentable {
         bannerViewController.view.frame = CGRect(origin: .zero, size: GADAdSizeBanner.size)
         
         // load an ad
-        bannerView.load(GADRequest())
+        let request = GADRequest()
+        request.scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        bannerView.load(request)
 
         return bannerViewController
     }

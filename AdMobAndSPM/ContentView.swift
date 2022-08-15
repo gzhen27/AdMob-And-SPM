@@ -10,8 +10,8 @@ import GoogleMobileAds
 
 struct ContentView: View {
     
-    // use the test ad unit ID(/6499/example/banner) from google
-    let homeAdUnitID = "/6499/example/banner"
+    // use an test ad unit ID from google
+    let homeAdUnitID = "ca-app-pub-3940256099942544/2934735716"
     
     var body: some View {
         VStack {
