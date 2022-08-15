@@ -12,6 +12,7 @@
 		EBBD17FE28AA9D500024C11F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBBD17FD28AA9D500024C11F /* Assets.xcassets */; };
 		EBBD180128AA9D500024C11F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBBD180028AA9D500024C11F /* Preview Assets.xcassets */; };
 		EBBD180928AA9EEC0024C11F /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = EBBD180828AA9EEC0024C11F /* GoogleMobileAds */; };
+		EBBD180C28AAB2430024C11F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBD180B28AAB2430024C11F /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		EBBD17FD28AA9D500024C11F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBBD180028AA9D500024C11F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EBBD180A28AAA1A00024C11F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EBBD180B28AAB2430024C11F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +56,11 @@
 		EBBD17F828AA9D480024C11F /* AdMobAndSPM */ = {
 			isa = PBXGroup;
 			children = (
-				EBBD180A28AAA1A00024C11F /* Info.plist */,
 				EBBD17F928AA9D480024C11F /* AdMobAndSPMApp.swift */,
-				EBBD17FB28AA9D480024C11F /* ContentView.swift */,
+				EBBD180B28AAB2430024C11F /* AppDelegate.swift */,
 				EBBD17FD28AA9D500024C11F /* Assets.xcassets */,
+				EBBD17FB28AA9D480024C11F /* ContentView.swift */,
+				EBBD180A28AAA1A00024C11F /* Info.plist */,
 				EBBD17FF28AA9D500024C11F /* Preview Content */,
 			);
 			path = AdMobAndSPM;
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBBD180C28AAB2430024C11F /* AppDelegate.swift in Sources */,
 				EBBD17FC28AA9D480024C11F /* ContentView.swift in Sources */,
 				EBBD17FA28AA9D480024C11F /* AdMobAndSPMApp.swift in Sources */,
 			);
@@ -291,6 +295,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.graystudio.AdMobAndSPM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
