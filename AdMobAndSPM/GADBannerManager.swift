@@ -1,5 +1,5 @@
 //
-//  GADBannerViewController.swift
+//  GADBannerManager.swift
 //  AdMobAndSPM
 //
 //  Created by G Zhen on 8/15/22.
@@ -8,7 +8,7 @@
 import GoogleMobileAds
 import SwiftUI
 
-struct GADBannerViewController: UIViewControllerRepresentable {
+struct GADBannerManager: UIViewControllerRepresentable {
     let adUnitID: String
     
     func makeUIViewController(context: Context) -> some UIViewController {

@@ -18,7 +18,7 @@ struct ContentView: View {
             Text("Hello, world!")
                 .padding()
             Spacer()
-            GADBannerViewController(adUnitID: homeAdUnitID)
+            GADBannerManager(adUnitID: homeAdUnitID)
                 .frame(width: GADAdSizeBanner.size.width, height: GADAdSizeBanner.size.height)
         }
     }
