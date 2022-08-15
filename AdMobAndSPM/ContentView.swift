@@ -10,15 +10,20 @@ import GoogleMobileAds
 
 struct ContentView: View {
     
-    // use an test ad unit ID from google
-    let homeAdUnitID = "ca-app-pub-3940256099942544/2934735716"
+    // use an test ad units ID from google
+    let homeBannerAdUnitID = "ca-app-pub-3940256099942544/2934735716"
+    let interstitalAd = GADInterstitalManager(adUnitID: "ca-app-pub-3940256099942544/4411468910")
     
     var body: some View {
         VStack {
-            Text("Hello, world!")
-                .padding()
             Spacer()
-            GADBannerManager(adUnitID: homeAdUnitID)
+            Button {
+                interstitalAd.showAd()
+            } label: {
+                Text("Display Interstitial Ad")
+            }
+            Spacer()
+            GADBannerManager(adUnitID: homeBannerAdUnitID)
                 .frame(width: GADAdSizeBanner.size.width, height: GADAdSizeBanner.size.height)
         }
     }

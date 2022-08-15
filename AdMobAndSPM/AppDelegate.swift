@@ -11,7 +11,7 @@ import GoogleMobileAds
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 
-        print("Initializing the Mobile Ads SDK")
+        print("Ad test - Initializing the Mobile Ads SDK")
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         
         return true
