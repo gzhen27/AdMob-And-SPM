@@ -6,11 +6,17 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("Hello, world!")
+                .padding()
+            Spacer()
+            GADBannerViewController()
+                .frame(width: GADAdSizeBanner.size.width, height: GADAdSizeBanner.size.height)
+        }
     }
 }
 
