@@ -20,7 +20,9 @@ final class GADInterstitalManager: NSObject, GADFullScreenContentDelegate {
     }
     
     private func load() {
-        GAMInterstitialAd.load(withAdManagerAdUnitID: adUnitID, request: GAMRequest()) { [self] ad, error in
+        let request = GAMRequest()
+        request.scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        GAMInterstitialAd.load(withAdManagerAdUnitID: adUnitID, request: request) { [self] ad, error in
             if let error = error {
                 print("Ad test - Failed to load interstitial ad with error: \(error.localizedDescription)")
                 return
@@ -44,6 +46,7 @@ final class GADInterstitalManager: NSObject, GADFullScreenContentDelegate {
     /// Tells the delegate that the ad dismissed full screen content.
     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         print("Ad test - Ad did dismiss full screen content")
+        load()
     }
     
     func showAd() {
